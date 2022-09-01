@@ -1,2 +1,2 @@
 #!/bin/bash
-chomd 753 ./hello
+chomd 753 hello
