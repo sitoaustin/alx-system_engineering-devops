@@ -1,0 +1,1 @@
+This section is for practise on what a server is and working with SSH which stands for Secure Shell.
