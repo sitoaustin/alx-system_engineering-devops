@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Install and configure HAproxy
+#(on lb-01 server)
+#Make sure that your servers are configured with the right hostnames:
+#[STUDENT_ID]-web-01 and [STUDENT_ID]-web-
+
+sudo apt show haproxy
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.7
+sudo apt update
+sudo apt install haproxy
+$ sudo haproxy -v
