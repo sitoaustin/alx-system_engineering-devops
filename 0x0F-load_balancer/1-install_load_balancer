@@ -9,7 +9,7 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.7
 sudo apt update
 sudo apt install haproxy
-$ sudo haproxy -v
+sudo haproxy -v
 
 #listen to web1 and web2 servers
 echo "
