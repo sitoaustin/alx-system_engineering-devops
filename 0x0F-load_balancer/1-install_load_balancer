@@ -6,7 +6,7 @@
 
 apt show haproxy
 apt install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.7
+add-apt-repository ppa:vbernat/haproxy-2.0
 apt update
 apt install haproxy
 haproxy -v
