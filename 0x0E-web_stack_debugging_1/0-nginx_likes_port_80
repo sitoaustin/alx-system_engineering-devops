@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-sudo sed 's/8080/80/' /etc/nginx/sites-enabled
+sudo sed 's/8080/80/' /etc/nginx/sites-enabled/default 1> /etc/nginx/sites-enabled/moon
+sudo cp /etc/nginx/sites-enabled/moon /etc/nginx/sites-enabled/moon
 sudo /etc/init.d/nginx restart
