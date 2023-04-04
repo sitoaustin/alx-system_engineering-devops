@@ -10,3 +10,18 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.7
 sudo apt update
 sudo apt install haproxy
 $ sudo haproxy -v
+
+#listen to web1 and web2 servers
+echo "
+    frontend http
+        bind *:80
+        default_backend servers
+    
+    backend servers
+        balance roundrobin
+        server 138269-web-01 54.87.169.56:80 check
+        server 138269-web-02 18.234.192.161:80 check
+    " >> /etc/haproxy/haproxy.cfg
+
+#starts the service
+sudo service haproxy start
