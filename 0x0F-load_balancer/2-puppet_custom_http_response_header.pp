@@ -2,6 +2,12 @@
 #Configure Nginx so that its HTTP response contains a custom header
 #(on web-01 and web-02
 
+# add stable version of nginx
+exec { 'add nginx stable repo':
+  command => 'sudo add-apt-repository ppa:nginx/stable',
+  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+}
+
 # update software packages list
 exec {"update packages":
   command => 'sudo apt-get update',
