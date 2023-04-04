@@ -11,6 +11,10 @@ sudo apt update
 sudo apt install haproxy
 sudo haproxy -v
 
+#This makes sure that HAProxy can be managed via
+#an init script
+echo "ENABLED=1" > /etc/default/haproxy
+
 #listen to web1 and web2 servers
 echo "
     frontend http
