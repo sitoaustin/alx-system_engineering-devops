@@ -4,12 +4,11 @@
 #Make sure that your servers are configured with the right hostnames:
 #[STUDENT_ID]-web-01 and [STUDENT_ID]-web-
 
-apt show haproxy
-apt install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.0
-apt update
-apt install haproxy
-haproxy -v
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.0
+apt-get update
+apt-get install -y haproxy=2.0.\*
+
 
 #This makes sure that HAProxy can be managed via
 #an init script
