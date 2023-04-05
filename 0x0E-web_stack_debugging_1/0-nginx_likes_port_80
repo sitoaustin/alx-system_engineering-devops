@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo mkdir /etc/nginx/delete-later/moon
-sudo sed 's/8080/80/' /etc/nginx/sites-enabled/default 1> /etc/nginx/delete-later/moon
-sudo cp /etc/nginx/delete-later/moon /etc/nginx/sites-enabled/default
+sudo touch /del-later.txt
+sudo sed 's/8080/80/' /etc/nginx/sites-enabled/default 1> /del-later.txt
+sudo cptouch /del-later.txt /etc/nginx/sites-enabled/default
 sudo /etc/init.d/nginx restart
