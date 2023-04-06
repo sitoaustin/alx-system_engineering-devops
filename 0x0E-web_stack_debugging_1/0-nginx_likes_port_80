@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-touch /del-later.txt
-sed 's/8080/80/' /etc/nginx/sites-enabled/default 1> /del-later.txt
-cptouch /del-later.txt /etc/nginx/sites-enabled/default
-/etc/init.d/nginx restart
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -sf /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx restart
