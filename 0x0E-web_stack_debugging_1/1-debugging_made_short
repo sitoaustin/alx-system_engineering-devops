@@ -2,4 +2,5 @@
 #A script that solves the problem why my Nginx installation is not listening to port 80
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-/etc/init.d/nginx stop
+/etc/init.d/nginx start
+sed 's/nginx is running/nginx is not running' /etc/init.d/nginx
