@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A bash script that accepts two arguments and 
+# and prints the domain name linked to my servers IP
+
+domain = $1
+subdomain =$2
+
+echo "The subdomain $domain is a $subdomain record and points to [DESTINATION]"
