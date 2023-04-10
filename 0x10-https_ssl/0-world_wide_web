@@ -15,5 +15,5 @@ then
   domain_info "$1" "web-02"
 elif [ "$#" == 2 ]
 then
-  domain_information "$1" "$2"
+  domain_info "$1" "$2"
 fi
