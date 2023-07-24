@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 import requests
 
-def GetApiData():
+if __name__ == "__main__":
     employee_Id = int(input())
     User_Data_Info = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(employee_Id))
     TOdos_response = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(employee_Id))
@@ -19,5 +19,3 @@ def GetApiData():
     for completedTask in List_of_completed_tasks:
         print(completedTask)
 
-if __name__ == "__main__":
-    GetApiData()
