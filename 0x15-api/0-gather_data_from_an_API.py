@@ -1,9 +1,10 @@
 # !/usr/bin/python3
 import requests
+import sys
 
 if __name__ == "__main__":
     try:
-        employee_Id = int(input())
+        employee_Id = sys.argv[1]
         User_Data_Info = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(employee_Id))
         TOdos_response = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(employee_Id))
         ListOfTodos = TOdos_response.json()
