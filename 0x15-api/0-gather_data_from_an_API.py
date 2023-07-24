@@ -14,8 +14,8 @@ if __name__ == "__main__":
         numberOfCompletedTask = 0
         List_of_completed_tasks = []
         for i in ListOfTodos:
-            List_of_completed_tasks.append(i['title'])
             if i['completed'] == True:
+                List_of_completed_tasks.append(i['title'])
                 numberOfCompletedTask = numberOfCompletedTask + 1
         print('Employee {} is done with tasks({}/{}):'.format(Current_Employee_name, numberOfCompletedTask, totalNumberOfTasks ))
         for completedTask in List_of_completed_tasks:
