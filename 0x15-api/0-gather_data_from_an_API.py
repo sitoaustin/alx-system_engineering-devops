@@ -17,9 +17,9 @@ if __name__ == "__main__":
             List_of_completed_tasks.append(i['title'])
             if i['completed'] == True:
                 numberOfCompletedTask = numberOfCompletedTask + 1
-        print('Employee {} is done with tasks({}/{})'.format(Current_Employee_name, numberOfCompletedTask, totalNumberOfTasks ))
+        print('Employee {} is done with tasks({}/{}):'.format(Current_Employee_name, numberOfCompletedTask, totalNumberOfTasks ))
         for completedTask in List_of_completed_tasks:
-            print(completedTask)
+            print('\t{}'.format(completedTask))
     except:
         print("Please enter an Integer")
 
