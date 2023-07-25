@@ -23,7 +23,7 @@ if __name__ == "__main__":
         numberOfCompletedTask = 0
         task_n_status = []
         for todos in ListOfTodos:
-            task_n_status.append("'{}','{}','{}','{}'".format(
+            task_n_status.append("'{}','{}','{}','{}'\n".format(
                 employee_Id, Current_Employee_name, todos['completed'],
                 todos['title']).split(","))
         path = '{}.csv'.format(employee_Id)
