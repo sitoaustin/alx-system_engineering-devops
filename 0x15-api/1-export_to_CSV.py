@@ -19,15 +19,10 @@ if __name__ == "__main__":
         ListOfTodos = TOdos_response.json()
         UserInfo = User_Data_Info.json()
         Current_Employee_name = UserInfo['username']
-        totalNumberOfTasks = len(ListOfTodos)
         task_n_status = list(
             filter(lambda x: x.get('userId') == employee_Id, ListOfTodos))
         path = '{}.csv'.format(employee_Id)
-        with open(path, "w") as csv_file:
-            writer = csv.writer(csv_file, delimiter=',')
-            for i in task_n_status:
-                writer.writerow(i)
-        with open('{}.csv'.format(employee_Id), 'w') as file:
+        with open(path, 'w') as file:
             for todo in task_n_status:
                 file.write(
                     '"{}","{}","{}","{}"\n'.format(
