@@ -23,11 +23,12 @@ if __name__ == "__main__":
         numberOfCompletedTask = 0
         task_n_status = []
         for todos in ListOfTodos:
-            task_n_status.append("'{}','{}','{}','{}'\n".format(
+            task_n_status.append("'{}','{}','{}','{}'".format(
                 employee_Id, Current_Employee_name, todos['completed'],
                 todos['title']).split(","))
+
         path = '{}.csv'.format(employee_Id)
-        with open(path, "w", newline='') as csv_file:
+        with open(path, "w", newline='\n') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
             writer.writerows(task_n_status)
     except TypeError as e:
