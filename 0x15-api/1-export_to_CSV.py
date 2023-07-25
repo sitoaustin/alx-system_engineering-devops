@@ -3,10 +3,9 @@
 Using https://jsonplaceholder.typicode.com
 returns info about employee TODO progress
 """
+import csv
 import requests
 import sys
-import csv
-
 
 if __name__ == "__main__":
     try:
@@ -25,7 +24,8 @@ if __name__ == "__main__":
         task_n_status = []
         for todos in ListOfTodos:
             task_n_status.append("'{}','{}','{}','{}'".format(
-                employee_Id, Current_Employee_name, todos['completed'], todos['title']).split(","))
+                employee_Id, Current_Employee_name, todos['completed'],
+                todos['title']).split(","))
         path = '{}.csv'.format(employee_Id)
         with open(path, "w", newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
