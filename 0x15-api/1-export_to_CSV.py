@@ -23,7 +23,7 @@ if __name__ == "__main__":
         task_n_status = list(
             filter(lambda x: x.get('userId') == employee_Id, ListOfTodos))
         path = '{}.csv'.format(employee_Id)
-        with open(path, "w", newline="\n") as csv_file:
+        with open(path, "w") as csv_file:
             writer = csv.writer(csv_file, delimiter=',')
             for i in task_n_status:
                 writer.writerow(i)
