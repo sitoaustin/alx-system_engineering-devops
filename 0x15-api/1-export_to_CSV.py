@@ -18,7 +18,7 @@ if __name__ == "__main__":
             .format(employee_Id))
         ListOfTodos = TOdos_response.json()
         UserInfo = User_Data_Info.json()
-        Current_Employee_name = UserInfo['name']
+        Current_Employee_name = UserInfo['username']
         totalNumberOfTasks = len(ListOfTodos)
         numberOfCompletedTask = 0
         task_n_status = []
