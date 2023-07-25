@@ -3,8 +3,8 @@
 Using https://jsonplaceholder.typicode.com
 returns info about employee TODO progress
 """
-import requests
 import json
+import requests
 import sys
 
 if __name__ == "__main__":
