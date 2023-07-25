@@ -30,6 +30,7 @@ if __name__ == "__main__":
               .format(Current_Employee_name,
                       numberOfCompletedTask, totalNumberOfTasks))
         for completedTask in List_of_completed_tasks:
+            print('\n')
             print('\t{}'.format(completedTask))
     except TypeError as e:
         print("Please enter an Integer")
